@@ -18,7 +18,17 @@ p::first-letter{
 .display{
     display: inline-block;
     padding: 3%;
-    cursor: pointer;
+    ;
+}
+.display:hover{
+    animation-name: animation;
+    animation-duration: 5s;
+}
+@keyframes animation {
+  0%   {background-color: red;}
+  25%  {background-color: yellow;}
+  50%  {background-color: blue;}
+  100% {background-color: green;}
 }
 .warna{
     background-image: linear-gradient(to right, red, yellow);
@@ -40,4 +50,20 @@ img{
 }
 .rata{
     text-align: center;
+}
+@media only screen and (max-width: 500px) {
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    .tempat{
+        width: 80%;
+    }
+    .lebar{
+        width: 100%;
+    }
+    .respon{
+        display: flex;
+        flex-direction: column;
+    }
 }
