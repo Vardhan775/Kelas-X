@@ -17,10 +17,10 @@
 <body>
 
     <!-- Navigasi -->
-    <nav class="navbar navbar-light bg-light navbar-expand-lg">
+    <nav class="navbar navbar-light bg-light navbar-expand-lg sticky-top">
         <div class="container mt-4 mb-3">
             <a class="navbar-brand" href="#">
-                <img src="images/bootstrap.png" width="180" alt="" loading="SMKN 2 Buduran">
+                <img src="images/bootstrap.png" width="80" alt="" loading="SMKN 2 Buduran">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,13 +32,16 @@
                         <a class="nav-link active" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Produk</a>
+                        <a class="nav-link" href="#Product">Product</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Promo</a>
+                        <a class="nav-link" href="#Promo">Promo</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Kontak</a>
+                        <a class="nav-link" href="#About">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#exampleModal">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -100,45 +103,177 @@
 
     <!-- card -->
 
-    <div class="">
-        <div class="row">
-            <div class="col-lg-4 d-flex justify-content-center"></div>
-            <div class="card border-0">
-                <img src="images/IPhone 11.jpeg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">IPhone 11</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <h5 class="card-title">Rp. 4.499.000</h5>
-                    <a href="#" class="btn btn-primary">Beli</a>
+    <div class="container">
+        <div class="row" id="Product">
+            <div class="col-lg-4 d-flex justify-content-center">
+                <div class="card border-0">
+                    <img src="images/IPhone 11.jpeg" class="card-img-top" alt="...  ">
+                    <div class="card-body">
+                        <h5 class="card-title">IPhone 11</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's content.</p>
+                        <h5 class="card-title">Rp. 4.499.000</h5>
+                        <a href="#" class="btn btn-primary">Beli</a>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="row">
-            <div class="col-lg-4 d-flex justify-content-center"></div>
-            <div class="card border-0">
-                <img src="images/Iphone 13.jpeg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">IPhone 13</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <h5 class="card-title">Rp. 6.499.000</h5>
-                    <a href="#" class="btn btn-primary">Beli</a>
+            <div class="col-lg-4 d-flex justify-content-center">
+                <div class="card border-0">
+                    <img src="images/Iphone 13.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">IPhone 13</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's content.</p>
+                        <h5 class="card-title">Rp. 6.499.000</h5>
+                        <a href="#" class="btn btn-primary">Beli</a>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="row">justify-content-center"></div>
-            <div class="card border-0" 
             <div class="col-lg-4 d-flex">
-                <img src="images/Iphone 16.jpeg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">IPhone 16</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <h5 class="card-title">Rp. 10.499.000</h5>
-                    <a href="#" class="btn btn-primary">Beli</a>
+                <div class="card border-0">
+                    <img src="images/Iphone 16.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">IPhone 16</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's content.</p>
+                        <h5 class="card-title">Rp. 10.499.000</h5>
+                        <a href="#" class="btn btn-primary">Beli</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="Promo">
+        <div class="row text-center bg-info text-light">
+            <div class="col">
+                <h1>Discount 50%</h1>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-lg-4">
+                <img src="images/IPhone 11.jpeg" width="300" alt="">
+            </div>
+            <div class="col-lg-8">
+                <table class="table mt-3 table-borderless">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">IPhone</th>
+                            <th scope="col">Discount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>IPhone 11</td>
+                            <td>40%</td>
+
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>IPhone 13</td>
+                            <td>30%</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>IPhone 16</td>
+                            <td>20%</td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="jumbotron jumbotron-fluid bg-dark text-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <p> <strong>SMK Negeri 2 Buduran</strong> <br>Sidoarjo Jawa Timur <br>Indonesia 61234</p>
+                </div>
+                <div class="col-lg-4">
+                    <p> <strong>Payment</strong> 
+                    <br>BRI<br>1234567</p>
+                    <br>BCA <br>1234567</p>
+                    <br>Mandiri <br>1234567</p>
+                </div>
+                <div class="col-lg-4">
+                    <p> <strong>About</strong>
+                    <br>SMK Negeri 2 Buduran didirikan pada 1995
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Button trigger modal -->
+    <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Launch demo modal
+    </button> -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">From Kontak</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Name</label>
+                                    <input type="text" class="form-control" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp">
+                                    <small id="emailHelp" class="form-text text-muted">Your Name and Address</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Address</label>
+                                    <input type="password" class="form-control" id="exampleInputPassword1">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">City</label>
+                                    <input type="password" class="form-control" id="exampleInputPassword1">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Postal Code</label>
+                                    <input type="password" class="form-control" id="exampleInputPassword1">
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+
+                    </form>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Submit</button>
                 </div>
             </div>
         </div>
