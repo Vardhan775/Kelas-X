@@ -1,0 +1,1 @@
+<h1>Sejara SMK Negeri 2 Buduran</h1>
