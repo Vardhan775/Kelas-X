@@ -6,6 +6,21 @@
 
 require_once "../function.PHP";
 
+if (isset($_GET['Update'])) {
+    $id=$_GET['Update'];
+    echo $id;
+    require_once "kategori/update.php";
+}
+
+
+if (isset($_GET['hapus'])) {
+    $id=$_GET['hapus'];
+    require_once "delete.php";
+}
+
+echo '<br>';
+
+
 $sql = "SELECT idkategori FROM tblkategori";
 $result = mysqli_query($koneksi,$sql);
 
@@ -50,6 +65,8 @@ echo '
     <tr>
         <th>No</th>
         <td>kategori</td>
+        <th>Hapus</th>
+        <th>Update</th>
     </tr>
 
 ';
@@ -59,6 +76,8 @@ if ($jumlah > 0) {
         echo '<tr>';
         echo '<td>'.$no++.'</td>';
         echo '<td>'.$row['kategori'].'</td>';
+        echo '<td><a href="?hapus='.$row['idkategori'].'">'.'Hapus'.'</a></td>';
+        echo '<td><a href="?update='.$row['idkategori'].'">'.'Update'.'</a></td>';
         echo '</tr>';
     }
 }

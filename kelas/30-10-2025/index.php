@@ -1,0 +1,114 @@
+<form action="" method="post">
+    Tanggal:
+    <input type="number" name="Tanggal" placeholder="Masukkan Tanggal"> <br>
+    Bulan:
+    <input type="number" name="Bulan" placeholder="Masukkan Bulan"> <br>
+    <input type="submit" name="kirim" Value="zodiak anda">
+</form>
+
+<form action="" method="post">
+    <input type="number" name="a" placeholder="angka 1">
+    <input type="number" name="b" placeholder="angka 2">
+    <select name="hitung" id="">
+        
+    </select>
+</form>
+
+
+<?php 
+
+    if (isset($_POST['kirim'])){
+        $Tanggal = $_POST['Tanggal'];
+        $Bulan = $_POST['Bulan'];
+
+        zodiak($Bulan, $Tanggal);
+    }
+
+    
+    // function belajar() {
+    //     echo "Hari ini saya belajar function";
+    // }
+
+    //Memanggil function
+    //belajar();
+
+    
+
+    // function cekTanggal($tanggal) {
+        
+
+    // if($tanggal > 0 && $tanggal < 32) {
+    //     echo "tanggal benar !";
+    // } else {
+    //     echo "tanggal salah !";
+    // }
+    // }
+
+    // cekTanggal(12);
+    // cekTanggal(100);
+    // cekTanggal(10);
+
+    // $Tanggal = ;
+    // $Bulan = ;
+
+    function zodiak($Bulan, $Tanggal) {
+        if ($Tanggal > 0 && $Tanggal < 32 && $Bulan > 0 && $Bulan < 13){
+
+        if ($Bulan == 1) {
+            if ($Tanggal > 0 && $Tanggal < 20) {
+                echo "zodiak anda : capricorn";
+            }else {
+            echo "zodiak anda : aquarius";
+        }}
+        
+    }
+}
+
+    function cekBulan($bulan) {
+        if ($bulan > 0 && $bulan < 13){
+            return true;
+        }else {
+            return false;
+        }
+    }
+
+
+    //cekBulan();
+    if(cekBulan(1)) {
+        echo "Bulan Benar";
+    }else {
+        echo "Bulan Salah";
+    }
+
+
+    function luasPersegiPanjang($p, $l){
+        $luas = $p * $l;
+        return $luas;
+    }
+    $p = 55;
+    $l = 33;
+    $t = 155;
+    echo "volume balok dengan panjang $p, lebar $l,  dan  tinggi $t adalah: <br>";
+    echo luasPersegiPanjang($p, $l) * $t;
+
+    // +-*/
+function tambah(){
+    return $a + $b;
+}
+
+function kurang(){
+    return $a - $b;
+}
+
+function kali(){
+    return $a * $b;
+}
+
+function bagi(){
+    return $a / $b;
+}
+
+
+
+
+?>
