@@ -51,62 +51,56 @@
     // $Tanggal = ;
     // $Bulan = ;
 
-    function zodiak($Bulan, $Tanggal) {
-        if ($Tanggal > 0 && $Tanggal < 32 && $Bulan > 0 && $Bulan < 13){
-
-        if ($Bulan == 1) {
-            if ($Tanggal > 0 && $Tanggal < 20) {
-                echo "zodiak anda : capricorn";
-            }else {
-            echo "zodiak anda : aquarius";
-        }}
+    function zodiak($tanggal , $bulan) {
+        if  ($tanggal > 0 && $tanggal < 32 && $bulan > 0 && $bulan < 13) {
+            
+            if ($bulan == 1){
+                if ($tanggal > 0 && $tanggal < 20){
+                    echo "Zodiak mu capricorn";
+                }else{
+                    echo "Zodiak mu aquarius";
+                }
+            }
+            if ($bulan)
         
-    }
-}
-
-    function cekBulan($bulan) {
-        if ($bulan > 0 && $bulan < 13){
-            return true;
-        }else {
-            return false;
         }
     }
 
 
     //cekBulan();
-    if(cekBulan(1)) {
-        echo "Bulan Benar";
-    }else {
-        echo "Bulan Salah";
-    }
+//     if(cekBulan(1)) {
+//         echo "Bulan Benar";
+//     }else {
+//         echo "Bulan Salah";
+//     }
 
 
-    function luasPersegiPanjang($p, $l){
-        $luas = $p * $l;
-        return $luas;
-    }
-    $p = 55;
-    $l = 33;
-    $t = 155;
-    echo "volume balok dengan panjang $p, lebar $l,  dan  tinggi $t adalah: <br>";
-    echo luasPersegiPanjang($p, $l) * $t;
+//     function luasPersegiPanjang($p, $l){
+//         $luas = $p * $l;
+//         return $luas;
+//     }
+//     $p = 55;
+//     $l = 33;
+//     $t = 155;
+//     echo "volume balok dengan panjang $p, lebar $l,  dan  tinggi $t adalah: <br>";
+//     echo luasPersegiPanjang($p, $l) * $t;
 
-    // +-*/
-function tambah(){
-    return $a + $b;
-}
+//     // +-*/
+// function tambah(){
+//     return $a + $b;
+// }
 
-function kurang(){
-    return $a - $b;
-}
+// function kurang(){
+//     return $a - $b;
+// }
 
-function kali(){
-    return $a * $b;
-}
+// function kali(){
+//     return $a * $b;
+// }
 
-function bagi(){
-    return $a / $b;
-}
+// function bagi(){
+//     return $a / $b;
+// }
 
 
 

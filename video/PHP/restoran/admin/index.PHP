@@ -1,7 +1,17 @@
 <?php 
 
+    session_start();
+
     require_once "../dbcontroller.PHP";
     $db = new DB;
+
+    if (!isset($_SESSION['user'])) {
+        header("location:login.PHP");
+    }
+    if (isset($_GET['log'])) {
+        session_destroy();
+        header("location:index.PHP");
+    }
 
 ?>
 
@@ -11,7 +21,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Page | Aplikasi Restoran SMK</title>
-    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
 </head>
 <body>
     <div class="container">
@@ -20,7 +30,9 @@
                 <h2>Restoran</h2>
             </div>
             <div class="col-md-9">
-                <div class="float-right mt-4">Logout</div>
+                <div class="float-right mt-4"><a href="?log=logout">Logout</a></div>
+                <div class="float-right mt-4 mr-4">User : <a href="?f=user&m=updateuser&id=<?php echo $_SESSION['iduser']?>"><?php echo $_SESSION['user'] ?></a></div>
+                
             </div>
         </div>
 

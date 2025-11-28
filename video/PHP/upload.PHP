@@ -23,9 +23,11 @@
         }
         
     $name = $_FILES['upload']['name'];
-    $temp = $_FILES['upload'];
+    $temp = $_FILES['upload']['tmp_name'];
 
     echo $name;
+
+    move_uploaded_file($temp,'gambar'.$name );
 
     }
 

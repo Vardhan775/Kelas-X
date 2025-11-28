@@ -24,7 +24,9 @@
             while ($row=mysqli_fetch_assoc($result)) {
                 $data[]=$row;
             }
-            return $data;
+            if (!empty($data)) {
+                return $data;
+            }
         }
 
         public function getITEM($sql)
@@ -53,7 +55,7 @@
         }
     }
 
-    // $db = new DB;
+    $db = new DB;
 
     // $db->pesan("berhasil");
 
