@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopee</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .top-bar {
+            background-color: orange;
+            display: flex;
+            justify-content: space-between;
+            padding: 6px 40px;
+            font-size: 14px;
+        }
+
+        .top-bar a {
+            color: black;
+            text-decoration: none;
+            margin-right: 8px;
+        }
+
+        .header {
+            background-color: orange;
+            display: flex;
+            align-items: center;
+            padding: 15px 40px;
+            gap: 40px;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .header img {
+            width:70px;
+            height: 70px;
+        }
+
+        .search {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .search input {
+            flex: 1;
+            height: 45px;
+            padding: 0 15px;
+            font-size: 16px;
+            border: none;
+            outline: none;
+        }
+        
+        .search button {
+            height: 45px;
+            padding: 0 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            background-color: white;
+            color: black;
+            border-left: 1px solid #ddd;
+        }
+
+        .search button:hover {
+            background-color: #f2f2f2;
+        }
+
+        section {
+            display: flex;
+            gap: 20px;
+            padding: 20px 40px;
+        }
+
+        .box-1,
+        .box-2,
+        .box-3 {
+            overflow: hidden;
+            border-radius: 6px;
+            background-color: #ddd;
+        }
+
+        .box-1 {
+            object-position: center right;
+        }
+
+        .box-2,
+        .box-3 {
+            object-position: center;
+        }
+
+        .box-1 img,
+        .box-2 img,
+        .box-3 img {
+            object-fit: cover;
+            background-color: #fff;
+        }
+
+        .menu-icons {
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        gap: 20px;
+        padding: 10px 40px 30px;
+        background-color: #fff;
+        }
+
+        .menu-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            font-size: 13px;
+            cursor: pointer;
+        }
+
+        .menu-item img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 6px;
+        }
+
+        .menu-item span {
+            line-height: 1.2;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-4px);
+            box-shadow:0 6px 18px grey;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <div>
+            <a href="">Seller Centre</a>|
+            <a href="">Mulai Berjualan</a>|
+            <a href="">Download</a>|
+            <a href="">Ikuti kami di</a>
+        </div>
+
+        <div>
+            <a href="">Notifikasi</a>
+            <a href="">Bantuan</a>
+            <a href="">Bahasa</a>
+            <a href="">Daftar</a>|
+            <a href="">Login</a>
+        </div>
+    </div>
+
+    <div class="header">
+        <img src="img/shopee.png" alt="">
+        <div class="logo">Shopee</div>
+
+        <div class="search">
+            <input type="text" placeholder="Cari Barang">
+            <button>Cari</button>
+        </div>
+    </div>
+
+    <section>
+        <div class="box-1">
+            <img src="img/banner1.webp" alt="banner">
+        </div>
+        
+        <div class="right">
+            <div class="box-2">
+                <img src="img/banner2.webp" alt="">
+            </div>
+            <div class="box-3">
+                <img src="img/banner3.webp" alt="">
+            </div>
+        </div>       
+    </section>
+
+    <section>
+        <div class="menu-icons">
+            <div class="menu-item">
+                <img src="img/" alt="">
+                <span>Shopee Pilih Lokal</span>
+            </div>
+
+            <div class="menu-item">
+                <img src="img/" alt="">
+                <span>Shopee Mall</span>
+            </div>
+
+            <div class="menu-item">
+                <img src="img/" alt="">
+                <span>Pulsa, Tagihan, dan tiket</span>
+            </div>
+
+            <div class="menu-item">
+                <img src="img/" alt="">
+                <span>Flash Sale</span>
+            </div>
+
+            <div class="menu-item">
+                <img src="img/" alt="">
+                <span>Shopee Supermarket</span>
+            </div>
+
+            <div class="menu-item">
+                <img src="img/" alt="">
+                <span>Dikelola Shopee</span>
+            </div>
+
+            <div class="menu-item">
+                <img src="img/" alt="">
+                <span>Fitcheck Diskon 25%</span>
+            </div>
+
+            <div class="menu-item">
+                <img src="img/" alt="">
+                <span>Gratis Ongkir dan Voucher</span>
+            </div>
+
+            <div class="menu-item">
+                <img src="img/" alt="">
+                <span>Shopee Barokah</span>
+            </div>
+
+            <div class="menu-item">
+                <img src="img/" alt="">
+                <span>Semua Promo</span>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
