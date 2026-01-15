@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Javascript</title>
+</head>
+<body>
+    <h1 id="judul"></h1>
+    <p id="isi"></p>
+    <input type="number" id="bil1" value="">
+    <input type="number" id="bil2" value="">
+    <button onclick="hitung()">Hitung</button>
+
+    <h1 id="zodiakanda">Zodiak Anda: </h1>
+    <input type="number" id="bulan" placeholder="Bulan">
+    <input type="number" id="tanggal" placeholder="Tanggal">
+    <button onclick="zodiak()">Zodiak</button>
+
+    <h1 id="nilaianda">Nilai Anda</h1>
+    <input type="number" id="nilai" placeholder="Nilai">
+    <button onclick="nilai()">Hasil</button>
+
+    <script>
+        function hitung () {
+            let hasil = document.getElementById("judul");
+            let bil1 = document.getElementById("bil1").value;
+            let bil2 = document.getElementById("bil2").value;
+            hasil.innerHTML = parseInt(bil1) + parseInt(bil2);    
+        }
+        
+        function zodiak () {
+            let bulan = parseInt(document.getElementById("bulan").value);
+            let tanggal = parseInt(document.getElementById("tanggal").value);
+            let zodiakanda = document.getElementById("zodiakanda");
+
+            if (bulan < 1 || bulan > 12) {
+                alert ("Bulan salah!");
+            } else {
+                if (tanggal < 1 || tanggal > 31) {
+                    alert ("Tanggal salah!");
+                } else {
+                    if (bulan == 1) {
+                        if (tanggal > 0 && tanggal < 20) {
+                            zodiakanda.innerHTML = "Aquarius";
+                        } else {
+                            zodiakanda.innerHTML = "Pisces";
+                        }
+                    }if (bulan == 2) {
+                        if (tanggal > 0 && tanggal < 19) {
+                            zodiakanda.innerHTML = "Capricorn";
+                        } else {
+                            zodiakanda.innerHTML = "Gemini"
+                        }
+                    }if (bulan == 3) {
+                        if (tanggal > 0 && tanggal < 21) {
+                            zodiakanda.innerHTML = "Leo";
+                        } else {
+                            zodiakanda.innerHTML = "Libra";
+                        }
+                    }if (bulan == 4) {
+                        if (tanggal > 0 && tanggal < 22){
+                            zodiakanda.innerHTML = "Cancer";
+                        } else {
+                            zodiakanda.innerHTML = "Virgo";
+                        }
+                    }if (bulan == 5) {
+                        if (tanggal > 0 && tanggal < 22) {
+                            zodiakanda.innerHTML = "Sagitarius";
+                        } else {
+                            zodiakanda.innerHTML = "Aries";
+                        }
+                    }
+                }
+            }
+        }
+    
+    // Tugas : Buatlah konversi nilai. Jika 90 - 100, Nilainya adalah A
+    // 70 - 89 Nilainya adalah B
+    // 60 - 69 Nilainya adalah C
+    // 50 - 59 Nilainya adalah D
+    // Dibawah 50 Nilainya adalah E
+
+        function nilai() {
+            let nilai = parseInt(document.getElementById("nilai").value);
+            let nilaianda = document.getElementById("nilaianda");
+
+            if (nilai < 1 || nilai > 100) {
+                alert ("Nilai Salah!");
+            } else {
+                if (nilai >= 90 && nilai <= 100) {
+                    nilaianda.innerHTML = "Nilai Anda : A";
+                } if (nilai >= 70 && nilai < 90) {
+                    nilaianda.innerHTML = "Nilai Anda : B";
+                } if (nilai >= 60 && nilai <= 70) {
+                    nilaianda.innerHTML = "Nilai Anda : C";
+                } if (nilai >= 50 && nilai <= 60) {
+                    nilaianda.innerHTML = "Nilai Anda : D";
+                } if (nilai >= 1 && nilai <= 50) {
+                    nilaianda.innerHTML = "Nilai Anda : E";
+                }
+            }
+        }
+    </script>
+
+    
+
+</body>
+</html>
