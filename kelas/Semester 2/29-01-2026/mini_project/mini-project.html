@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reusable Callback - HTML Saja</title>
+</head>
+
+<body>
+    <h2>Contoh Reusable Callback ke HTML</h2>
+
+    <input id="angka1" type="number" placeholder="Masukkan angka pertama">
+    <input id="angka2" type="number" placeholder="Masukkan angka kedua">
+
+    <br><br>
+
+    <button onclick="prosesTambah()">TAMBAH</button>
+    <button onclick="prosesKurang()">KURANG</button>
+    <button onclick="prosesKali()">KALI</button>
+    <button onclick="prosesBagi()">BAGI</button>
+
+    <br><br>
+
+    <h3>Hasil 1:</h3>
+    <div id="hasil1"></div>
+
+    <h3>Hasil 2:</h3>
+    <div id="hasil2"></div>
+
+    <h3>Hasil 3:</h3>
+    <div id="hasil3"></div>
+
+    <h3>Hasil 4:</h3>
+    <div id="hasil4"></div>
+
+    <script>
+        // FUNGSI UTAMA
+        function hitung(a, b, operasi, callback) {
+            let hasil;
+            if (operasi === 'tambah') hasil = a + b;
+            if (operasi === 'kurang') hasil = a - b;
+            if (operasi === 'kali') hasil = a * b;
+            if (operasi === 'bagi') hasil = a / b;
+            callback(hasil);
+        }
+
+        // ===== REUSABLE CALLBACKS (HANYA UNTUK HTML) =====
+        function tampilHasil1(hasil) {
+            document.getElementById('hasil1').innerHTML = 'Hasil: ' + hasil;
+        }
+
+        function tampilHasil2(hasil) {
+            document.getElementById('hasil2').innerHTML = 'Rp ' + hasil;
+        }
+
+        function tampilHasil3(hasil) {
+            document.getElementById('hasil3').innerHTML = 'Total: ' + hasil + ' point';
+        }
+
+        function tampilHasil4(hasil) {
+            document.getElementById('hasil4').innerHTML = '➡️ ' + hasil;
+        }
+
+        // ===== REUSE CALLBACK KE HTML =====
+        function prosesTambah() {
+            const a = Number(document.getElementById('angka1').value);
+            const b = Number(document.getElementById('angka2').value);
+
+            // REUSE callback yang sama
+            hitung(a, b, 'tambah', tampilHasil1);
+            hitung(a, b, 'tambah', tampilHasil2);
+            hitung(a, b, 'tambah', tampilHasil3);
+            hitung(a, b, 'tambah', tampilHasil4);
+        }
+
+        function prosesKurang() {
+            const a = Number(document.getElementById('angka1').value);
+            const b = Number(document.getElementById('angka2').value);
+
+            // REUSE callback yang SAMA PERSIS
+            hitung(a, b, 'kurang', tampilHasil1);
+            hitung(a, b, 'kurang', tampilHasil2);
+            hitung(a, b, 'kurang', tampilHasil3);
+            hitung(a, b, 'kurang', tampilHasil4);
+        }
+
+        function prosesKali() {
+            const a = Number(document.getElementById('angka1').value);
+            const b = Number(document.getElementById('angka2').value);
+
+            // REUSE callback yang SAMA PERSIS
+            hitung(a, b, 'kali', tampilHasil1);
+            hitung(a, b, 'kali', tampilHasil2);
+            hitung(a, b, 'kali', tampilHasil3);
+            hitung(a, b, 'kali', tampilHasil4);
+        }
+
+        function prosesBagi() {
+            const a = Number(document.getElementById('angka1').value);
+            const b = Number(document.getElementById('angka2').value);
+
+            if (b === 0) {
+                document.getElementById('hasil1').innerHTML = 'Error: Tidak bisa bagi 0';
+                return;
+            }
+
+            // REUSE callback yang SAMA PERSIS
+            hitung(a, b, 'bagi', tampilHasil1);
+            hitung(a, b, 'bagi', tampilHasil2);
+            hitung(a, b, 'bagi', tampilHasil3);
+            hitung(a, b, 'bagi', tampilHasil4);
+        }
+    </script>
+</body>
+
+</html>

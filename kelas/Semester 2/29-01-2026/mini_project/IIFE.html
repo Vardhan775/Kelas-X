@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IIFE</title>
+</head>
+
+<body>
+    <p id="hasil1"></p>
+    <p id="hasil2"></p>
+    <p id="hasil3"></p>
+    <script>
+        function Siswa(a, b) {
+            let nama = a;
+            let umur = b;
+            let perkenalan = function () {
+                return `Halo, nama saya ${nama} dan saya berumur ${umur} tahun.`;
+            };
+        }
+        const siswa1 = new Siswa("Budi", 21);
+        const siswa2 = new Siswa("Rafa", 16);
+        const siswa3 = new Siswa("Mirza", 10);
+        document.getElementById("hasil1").innerText = siswa1.perkenalan();
+        document.getElementById("hasil2").innerText = siswa2.perkenalan();
+        document.getElementById("hasil3").innerText = siswa3.perkenalan();
+    </script>
+</body>
+
+</html>
