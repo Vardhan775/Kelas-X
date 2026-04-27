@@ -1,5 +1,6 @@
 public class Overloading {
 
+    // Ini procedure
     static int perkalian(int a, int b){
         System.out.println("Perkalian 2 int: " + a * b);
         return a * b;
