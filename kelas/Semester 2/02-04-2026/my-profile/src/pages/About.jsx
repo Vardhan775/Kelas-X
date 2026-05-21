@@ -6,11 +6,11 @@ const API = 'http://localhost:8000/api'
 // Fallback data jika backend belum jalan
 const fallback = {
   nama: 'Aditya Vardhan Irwansyah',
-  kelas: 'X RPL',
+  kelas: 'RPL',
   sekolah: 'SMK Negeri 2 Buduran',
-  hobi: 'Menggambar, Membaca Desain, Bersepeda',
+  hobi: 'Bersepeda, bermain basket, dan memasak',
   motto: '"Arsitektur adalah puisi yang diukir dengan batu dan baja."',
-  bio: 'Halo! Saya adalah seorang siswa kelas X yang memiliki passion besar terhadap dunia arsitektur. Sejak kecil, saya selalu terpesona melihat gedung-gedung megah, rumah-rumah berdesain unik, dan bagaimana manusia bisa mengubah ruang kosong menjadi tempat yang bermakna. Impian saya adalah menjadi seorang arsitek yang merancang bangunan yang tidak hanya indah secara estetika, tetapi juga fungsional dan berkelanjutan.',
+  bio: 'Nama saya Aditya Vardhan Irwansyah. Saat ini saya berusia 16 tahun dan tahun ini akan menginjak usia 17 tahun. Saya memiliki beberapa hobi yang saya sukai, seperti bersepeda, bermain basket, dan memasak. Bagi saya, hobi tersebut bukan hanya sekadar kegiatan mengisi waktu luang, tetapi juga menjadi cara untuk menjaga kesehatan, melatih kerja sama, dan menambah kreativitas.\n\nSaya memiliki cita-cita menjadi seorang arsitek karena saya tertarik dengan dunia desain bangunan dan seni dalam menciptakan sebuah karya. Saya ingin bisa membuat bangunan yang tidak hanya indah, tetapi juga nyaman dan bermanfaat bagi banyak orang.\n\nSaat ini saya bersekolah di SMK Negeri 2 Buduran dan mengambil jurusan Rekayasa Perangkat Lunak (RPL). Saya memilih jurusan ini karena saya ingin mempelajari lebih dalam tentang dunia coding dan teknologi. Selain itu, saya juga ingin mengembangkan kemampuan di bidang pemrograman agar dapat mengikuti perkembangan zaman yang semakin maju. Saya percaya bahwa dengan belajar sungguh-sungguh, kerja keras, dan terus mencoba hal baru, saya bisa meraih cita-cita yang saya impikan di masa depan.',
 }
 
 export default function About() {
@@ -48,7 +48,7 @@ export default function About() {
             </h1>
             <div className="gold-line" style={{ margin: '0 0 1.5rem 0' }} />
 
-            <p className="about-bio fade-in fade-in-delay-2">
+            <p className="about-bio fade-in fade-in-delay-2" style={{ whiteSpace: 'pre-line' }}>
               {loading ? 'Memuat...' : info.bio}
             </p>
 

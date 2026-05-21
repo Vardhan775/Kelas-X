@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
-import { NavLink, useLocation } from 'react-router-dom'
+import { NavLink, useLocation, Link, useNavigate } from 'react-router-dom'
+import { useAuth } from '../context/AuthContext'
 
 const links = [
   { to: '/', label: 'Home' },
@@ -13,6 +14,8 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const location = useLocation()
+  const { user, logout } = useAuth()
+  const navigate = useNavigate()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40)
@@ -23,6 +26,12 @@ export default function Navbar() {
   useEffect(() => {
     setMenuOpen(false)
   }, [location])
+
+  const handleLogout = async () => {
+    await logout()
+    navigate('/')
+    setMenuOpen(false)
+  }
 
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
@@ -43,6 +52,23 @@ export default function Navbar() {
             </NavLink>
           </li>
         ))}
+        {user ? (
+          <li>
+            <button onClick={handleLogout} className="navbar-btn" style={{ background: 'none', border: 'none', color: 'inherit', cursor: 'pointer', fontFamily: 'inherit', fontSize: 'inherit', padding: 0 }}>
+              Logout ({user.name})
+            </button>
+          </li>
+        ) : (
+          <li>
+            <NavLink
+              to="/login"
+              className={({ isActive }) => isActive ? 'active' : ''}
+              onClick={() => setMenuOpen(false)}
+            >
+              Login
+            </NavLink>
+          </li>
+        )}
       </ul>
 
       <button

@@ -4,12 +4,10 @@ import axios from 'axios'
 const API = 'http://localhost:8000/api'
 
 const fallbackSkills = [
-  { id: 1, icon: '📐', name: 'AutoCAD', desc: 'Software menggambar teknik 2D untuk denah, tampak, dan potongan bangunan.', level: 70 },
-  { id: 2, icon: '🏗️', name: 'SketchUp', desc: 'Pemodelan 3D bangunan untuk visualisasi desain arsitektur secara intuitif.', level: 60 },
-  { id: 3, icon: '🎨', name: 'Blender', desc: 'Rendering 3D realistis untuk presentasi proyek arsitektur.', level: 45 },
-  { id: 4, icon: '📏', name: 'Menggambar Manual', desc: 'Teknik menggambar tangan untuk sketsa awal konsep dan ideasi desain.', level: 80 },
-  { id: 5, icon: '🌿', name: 'Desain Berkelanjutan', desc: 'Prinsip arsitektur hijau dan ramah lingkungan untuk masa depan.', level: 55 },
-  { id: 6, icon: '📖', name: 'Sejarah Arsitektur', desc: 'Memahami evolusi gaya arsitektur dari klasik hingga kontemporer.', level: 75 },
+  { id: 1, icon: '✍️', name: 'Sketsa manual', desc: 'Kemampuan menggambar murni dengan tangan untuk visualisasi ide.', level: 85 },
+  { id: 2, icon: '💻', name: 'Digital drawing', desc: 'Teknik pembuatan sketsa secara digital menggunakan perangkat lunak.', level: 80 },
+  { id: 3, icon: '🎨', name: 'Creative design', desc: 'Kreativitas dalam merancang solusi visual yang unik dan fungsional.', level: 80 },
+  { id: 4, icon: '🎯', name: 'Accuracy', desc: 'Ketelitian tinggi dalam memastikan setiap detail karya divisualisasikan dengan tepat.', level: 90 },
 ]
 
 export default function Skills() {
@@ -37,8 +35,7 @@ export default function Skills() {
           </h1>
           <div className="gold-line" />
           <p className="section-desc fade-in fade-in-delay-2">
-            Sebagai calon arsitek, saya terus mengasah berbagai kemampuan teknis
-            dan kreatif yang dibutuhkan di dunia arsitektur.
+            Skill yang saya miliki adalah menggambar sketsa manual, digital drawing dasar, kreativitas desain, dan ketelitian dalam membuat karya visual.
           </p>
         </div>
 
